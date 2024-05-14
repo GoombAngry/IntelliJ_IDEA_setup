@@ -26,4 +26,5 @@
    
 
 ## Add (you must have installed IntelliJ IDEA via this script) the configuration necessary for a user to be able to use IntelliJ IDEA
-Aliquam et nisl ac arcu cursus consectetur eu sed risus. Maecenas tincidunt in lorem ac egestas. Donec facilisis maximus ante nec eleifend. Maecenas in ligula eros. Cras gravida accumsan ex, sit amet congue quam consequat sit amet. Proin bibendum nibh hendrerit quam scelerisque porta. Vestibulum sagittis fermentum est ut aliquet. Ut elit nisi, faucibus a lacinia vitae, pulvinar non arcu. Suspendisse urna purus, aliquet et vehicula sit amet, dictum vel elit. Praesent aliquam cursus pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Imagine that after installing with this IntelliJ IDEA script you have created another user but you cannot use the "idea" command.
+In this case we are going to add the configuration to the new user so that they can use IntelliJ IDEA.
