@@ -1,6 +1,6 @@
 #!/bin/bash
 # Nombre de la carpeta donde se ubicara el programa
-nameDirInstall="IntelliJ_IDEA_by_GoombAngry";
+nameDirInstall="IntelliJ_IDEA";
 # Convertir texto a minuscula
 LowerCase(){
         word=$1;
@@ -53,6 +53,8 @@ AddExecutingToUser(){
 			if [ "$(LowerCase $var)" == "s" ]; then
 				echo "[✓] - Configured path for user $i to run IntelliJ IDEA";
 				echo -e "# Configuring path to run IntelliJ IDEA by GoombAngry \nIntellij_IDEA=\"$1\"\nexport PATH=\"\$PATH:\$Intellij_IDEA\"" >> $pathIter/.bashrc;
+				echo -e "[Desktop Entry]\nVersion=1.0\nName=IntelliJ_IDEA\nComment=Entorno de desarrollo integrado (IDE) para el desarrollo de programas informáticos.\nExec=$1/idea\nIcon=$1/idea.svg\nTerminal=false\nType=Application\nCategories=Utility;Application;" > $pathIter/.local/share/applications/$nameDirInstall.desktop;
+				chmod 755 $pathIter/.local/share/applications/$nameDirInstall.desktop;
 				echo "[✓] - Changes successfully made to the user $i";
 			fi
 			
@@ -93,12 +95,10 @@ if [ $userid -eq 0 ];then
 						tar -xvf $2;
 						# Cambiar nombre carpetas
 						mv $nameFileExtract $nameDirInstall;
-						# Renombrar fichero idea.sh
-						mv $nameDirInstall/bin/idea.sh $nameDirInstall/bin/idea;
 						# Mover carpeta a /opt
 						mv $nameDirInstall /opt/;
 						# Agregando permisos 755 a la carpeta
-						chmod 755 -R /opt/$nameDirInstall;
+						chmod 775 -R /opt/$nameDirInstall;
 						clear;
 						AddExecutingToUser /opt/$nameDirInstall/bin;
 						echo "[✓] - The installation completes correctly";
