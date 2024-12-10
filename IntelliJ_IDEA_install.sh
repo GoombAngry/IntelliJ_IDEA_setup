@@ -125,6 +125,8 @@ if [ $userid -eq 0 ];then
 								if ! [ $fileCheckExist == "" ]; then
 									echo -e "# Configuring path to run IntelliJ IDEA by GoombAngry \nIntellij_IDEA=\"/opt/$nameDirInstall/bin\"\nexport PATH=\"\$PATH:\$Intellij_IDEA\"" >> /home/$2/.bashrc;
 									echo "[✓] - Changes successfully made to the user $2";
+								        echo -e "[Desktop Entry]\nVersion=1.0\nName=IntelliJ_IDEA\nComment=Entorno de desarrollo integrado (IDE) para el desarrollo de programas informáticos.\nExec=/opt/$nameDirInstall/bin/idea\nIcon=/opt/$nameDirInstall/bin/idea.svg\nTerminal=false\nType=Application\nCategories=Utility;Application;" > /home/$2/.local/share/applications/$nameDirInstall.desktop;
+				                                        chmod 755 /home/$2/.local/share/applications/$nameDirInstall.desktop;
 									echo "[!] - [ ######### IMPORTANT ######### ]";
 									echo "[!] - To run Intellij IDEA IDE you must close the terminal, open a new one and run the command \"idea\"";
 								else
