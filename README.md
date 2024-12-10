@@ -14,8 +14,9 @@
 4. In the installation process it tells us if we want to configure x users of the system so that they can run the IDE.
    ![Step4](/images/4step.png)
    ![Step5](/images/5step.png)
-6. Once it finishes we must close the terminal and open a new one and execute the "idea" command.
+6. Once it finishes we must close the terminal and open a new one and execute the "idea" command or search for the application in the search engine.
    ![Step6](/images/6step.png)
+   ![Step6](/images/7step.png)
 
 ### Advice
 ***If you want to close the terminal and the program does not close, run it like this**
